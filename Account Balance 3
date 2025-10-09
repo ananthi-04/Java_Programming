@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int balance=sc.nextInt();
+        int operation=sc.nextInt();
+        int amount;
+        switch(operation){
+            case 1:
+                amount=sc.nextInt();
+                balance+=amount;
+                System.out.println(balance);
+                break;
+            case 2:
+                amount=sc.nextInt();
+                if(amount>balance){
+                    System.out.println("Insufficient Balance");
+                }
+                else{
+                    balance-=amount;
+                    System.out.println(balance);
+                }
+                break;
+            default:
+                System.out.println("Invalid Input");
+        }
+    }
+}
