@@ -1,0 +1,19 @@
+import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+         Scanner sc = new Scanner(System.in);
+        long num = sc.nextLong();
+        if (num <= 0||num > 1000000000) {
+            System.out.println("Invalid Input");
+        }
+        else{
+        long reverse=0;
+        while (num>0) {
+            reverse=reverse*10+(num % 10);
+            num=num/10;
+        }
+        System.out.println(reverse);
+    }
+}
+}
