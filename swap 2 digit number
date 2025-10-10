@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        if(num<100){
+        int val1 = num / 10;
+        int val2 = num % 10;
+        int swap = val2*10+val1;
+        System.out.println(swap);
+        }
+        else if(num>=100 && num<1000)
+        {
+           int value1=num/10;
+           int value2=value1/10;
+           int value3=value1%10;
+            int swapnumber=value3*10+value2;
+           System.out.println(swapnumber);
+        }
+        else{
+            int values1=num/10000;
+            int values2=(num/1000)%10;
+            int swaps=values2*10+values1;
+            System.out.println(swaps);
+            
+        }
+            
+    }
+}
