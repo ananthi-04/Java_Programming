@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+public class Solution {
+    static int sum_of_digit(int a) {
+        if(a==0){
+            return 0;
+        }
+        return(a%10)+sum_of_digit(a/10);
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        if(n<1000)
+        {
+            int res=sum_of_digit(n);
+            System.out.printf("Sum of Digit:%04d",res);
+        } 
+        else
+        {
+            System.out.println("Enter a Valid Input!!!!!!!");
+        }
+    }
+}
